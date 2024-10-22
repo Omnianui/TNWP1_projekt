@@ -1,0 +1,27 @@
+:root{
+    /*https://coolors.co/0b0033-370031-832232-ce8964-eaf27c*/
+    --background_color:#0B0033;
+    --text_color: #EAF27C;
+    --acent_color: #370031;
+    --border_color: #832232;
+    --secondary_text_color: #CE8964;
+}
+
+body{
+    display: grid;
+    
+    
+}
+
+footer{
+    display: grid;
+
+}
+
+@media screen {
+    
+}
+
+@media screen {
+    
+}
