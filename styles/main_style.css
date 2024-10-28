@@ -1,27 +1,79 @@
 :root{
     /*https://coolors.co/0b0033-370031-832232-ce8964-eaf27c*/
-    --background_color:#0B0033;
+    --accent_color:#0B0033;
     --text_color: #EAF27C;
-    --acent_color: #370031;
+    --background_color: #370031;
     --border_color: #832232;
     --secondary_text_color: #CE8964;
+
+    --main_font_family: Georgia, 'Times New Roman', Times, serif;
+}
+
+*{
+    background-color: var(--background_color);
+    color: var(--text_color);
+    font-family: var(--main_font_family);
 }
 
 body{
     display: grid;
-    
-    
+    grid-template-areas: 
+        'header'
+        'nav'
+        'main'
+        'footer';
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+.actual_site{
+    background-color: var(--accent_color);
+}
+
+main{
+    grid-area: main;
 }
 
 footer{
     display: grid;
-
+    grid-area: footer;
+    grid-template-areas: 
+        'left center right'
+        '. copy .';
 }
 
-@media screen {
+footer p{
+    text-align: center;
+}
+
+footer .left{
+    grid-area: left;
+}
+
+footer .center{
+    grid-area: center;
+}
+
+footer .right{
+    grid-area: right;
+}
+
+footer .copy{
+    grid-area: copy;
+}
+
+@media only screen and (max-width:600px){
     
 }
 
-@media screen {
+@media only screen and (max-width:300px){
     
 }
