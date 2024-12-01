@@ -1,1 +1,23 @@
 @import "main_style.css";
+
+
+main{
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+.imgWrap{
+    
+}
+
+
+
+
+
+img{
+
+}
+

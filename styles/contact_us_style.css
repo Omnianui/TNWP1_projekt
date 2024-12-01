@@ -1,1 +1,16 @@
 @import "main_style.css";
+
+main{
+    
+}
+
+form{
+    display: grid;
+
+}
+
+input{
+    border-style: solid;
+    background-color: rgba(0,0,0,0);
+    
+}

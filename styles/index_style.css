@@ -1,9 +1,5 @@
 @import "main_style.css";
 
-body{
-    height: 100%;
-}
-
 main{
     display: grid;
     grid-template-areas: 
@@ -11,45 +7,59 @@ main{
     'foto paragraph2';
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1% 1%;
+    gap: 15px 15px;
 }
 
 img{
     grid-area: foto;
     display: block;
-    height: 100%;
     width: 100%;
+    margin: auto;
 }
 
 article{
     grid-area: paragraph;
-    background-color: var(--segment_color);
-    max-width: 100%;
     max-height: 100%;
-    padding: 1%;
+    height: 100%;
+    align-content: center;
+    display: block;
+    border-style: solid;
+}
+
+article p{
+    color: var(--text_color);
+    text-align: center;
+    padding: 5px 10px;
 }
 
 .propositions{
     grid-area: paragraph2;
-    background-color: var(--segment_color);
+    display: grid;
+    gap: 15px;
 }
 
-article p{
-    color: var(--secondary_segment_color);
+.propositions div{
+    border-style: solid;
 }
 
-@media only screen and (max-width:769px){
+@media only screen and (max-width:900px){
     main{
-        
+        grid-template-areas: 
+        'paragraph'
+        'foto'
+        'paragraph2';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
-
-
 }
 
 @media only screen and (max-width:480px){
     main{
-        
+        grid-template-areas: 
+        'paragraph'
+        'foto'
+        'paragraph2';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
-
-
 }
