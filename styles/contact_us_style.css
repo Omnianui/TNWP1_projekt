@@ -1,16 +1,54 @@
 @import "main_style.css";
 
-main{
-    
-}
-
 form{
     display: grid;
+    grid-template-areas: 
+    'type message'
+    'name message'
+    'email message'
+    'phone message'
+    'adress message'
+    'submit submit';
+    gap: 10px;
+    grid-template-columns: auto 1fr;
 
 }
 
 input{
     border-style: solid;
     background-color: rgba(0,0,0,0);
-    
+    padding: 15px;
+}
+
+input:focus{
+    border-color: var(--accent_color);
+    outline: none;
+}
+
+#subButton{
+    grid-area: submit;
+}
+
+#jmenoInput{
+
+}
+
+#emailInput{
+
+}
+
+#telInput{
+
+}
+
+#message{
+
+}
+
+#typeInput{
+
+}
+
+#adressInput{
+
 }

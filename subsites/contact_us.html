@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cz">
+<html lang="cs">
 
 <head>
   <meta charset="utf-8">
@@ -26,12 +26,16 @@
         <p>IT služby</p>
       </header>
       <main>
-        <form>
-          <input>
-          <input>
-          <input>
-          <input type="text">
-          <input type="submit">
+        <form method="post">
+          <input id="nameInput" type="text">
+          <select id="typeInput">
+
+          </select>
+          <input id="emailInput" type="email">
+          <input id="adressInput" type="text">
+          <input id="telInput" type="tel" pattern="+420 [0-9]{3} [0-9]{3} [0-9]{3}">
+          <input id="message" type="text">
+          <input id="subButton" type="submit" value="Odeslat">
         </form>
       </main>
       <footer>

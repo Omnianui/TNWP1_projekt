@@ -32,17 +32,28 @@ article p{
     padding: 5px 10px;
 }
 
+h2,h3{
+    text-align: center;
+}
+
 .propositions{
     grid-area: paragraph2;
     display: grid;
-    gap: 15px;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .propositions div{
     border-style: solid;
+    padding: 10px 0px;
+    
 }
 
-@media only screen and (max-width:900px){
+.propositions div h3{
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width:1000px){
     main{
         grid-template-areas: 
         'paragraph'
@@ -53,7 +64,7 @@ article p{
     }
 }
 
-@media only screen and (max-width:480px){
+@media only screen and (max-width:500px){
     main{
         grid-template-areas: 
         'paragraph'
