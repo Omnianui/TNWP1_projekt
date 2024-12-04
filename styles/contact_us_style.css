@@ -30,25 +30,25 @@ input:focus{
 }
 
 #jmenoInput{
-
+    grid-area: name;
 }
 
 #emailInput{
-
+    grid-area: email;
 }
 
 #telInput{
-
+    grid-area: phone;
 }
 
 #message{
-
+    grid-area: message;
 }
 
 #typeInput{
-
+    grid-area: type;
 }
 
 #adressInput{
-
+    grid-area: adress;
 }
