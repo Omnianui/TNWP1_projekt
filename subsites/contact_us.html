@@ -7,7 +7,15 @@
   <title>Adam_Triska_web</title>
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <script>
+    function addSpace() {
+      var inputValue = document.getElementById("telInput").value;
+      var inputValueLength = inputValue.length;
+      if (inputValueLength == 3 || inputValueLength == 7) {
+        document.getElementById("telInput").value = inputValue + " ";
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -27,14 +35,22 @@
       </header>
       <main>
         <form method="post">
-          <input id="nameInput" type="text">
+          <input id="nameInput" type="text" placeholder="Jméno">
+          <input id="surnameInput" type="text" placeholder="Příjmení">
           <select id="typeInput">
-
+            <option disabled selected>Vyberte si možnost</option>
+            <option>Zájem o službu</option>
+            <option>Zákaznická podpora</option>
+            <option>Reklamace</option>
+            <option>Dotaz</option>
+            <option>Jiné</option>
           </select>
-          <input id="emailInput" type="email">
-          <input id="adressInput" type="text">
-          <input id="telInput" type="tel" pattern="+420 [0-9]{3} [0-9]{3} [0-9]{3}">
-          <input id="message" type="text">
+          <input id="emailInput" type="email" placeholder="Email">
+          <input id="adressInput" type="text" placeholder="Adresa">
+          <input id="telInput" type="tel" pattern="+420 [0-9]{3} [0-9]{3} [0-9]{3}" onkeypress="addSpace()" placeholder="Telefoní číslo">
+          <div id="textBorder">
+            <textarea id="message" placeholder="Obsah zprávy"></textarea>
+          </div>
           <input id="subButton" type="submit" value="Odeslat">
         </form>
       </main>
@@ -47,4 +63,5 @@
     </div>
   </div>
 </body>
+
 </html>

@@ -2,6 +2,7 @@
 
 main{
     display: grid;
+    gap: 15px;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -12,5 +13,19 @@ h2{
 article{
      display: block;
      align-content: center;
-     height: 100%;
+     border-style: solid;
+     padding: 10px;
+     font-size: larger;
+}
+
+img{
+     width: 100%;
+     margin-top: auto;
+     margin-bottom: auto;
+}
+
+@media only screen and (max-width:1000px){
+     main{
+          grid-template-columns: 1fr;
+     }
 }

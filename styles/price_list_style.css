@@ -1,12 +1,26 @@
 @import "main_style.css";
 
 main{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
 }
 
 table{
     border-style: solid;
+}
+
+caption{
+    font-size:1.5rem;
+    margin-bottom: 15px;
+}
+
+td{
+    text-align: center;
+}
+
+@media only screen and (max-width:1000px){
+    main{
+        grid-template-columns: 1fr;
+    }
 }

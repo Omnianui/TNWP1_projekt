@@ -8,7 +8,17 @@
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
+    function showImage(e) {
+      modal.style.display = "block";
+      img.src = e.target.getAttribute("data-img");
+      header.innerHTML = e.target.innerHTML;
+    }
     
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    } 
   </script>
 </head>
 
@@ -30,24 +40,45 @@
       <main>
 
         <div class="imgWrap">
-          <img src="../assets/20230812_092218.jpg" alt="">
-          <div>
-            <h2></h2>
-            <p></p>
+          <img src="../assets/20230812_092218.jpg" alt="Ledeč nad Sázavou">
+          <div onclick="showImage(event)" data-img="../assets/20230812_092218.jpg">
+            <h2>Ledeč nad Sázavou</h2>
           </div>
         </div>
         <div class="imgWrap">
-          <img src="../assets/20240712_122032560_iOS.jpg" alt="">
-          <div>
-            <h2></h2>
-            <p></p>
+          <img src="../assets/20240712_122032560_iOS.jpg" alt="Guinigi Tower">
+          <div onclick="showImage(event)" data-img="../assets/20240712_122032560_iOS.jpg">
+            <h2>Guinigi Tower</h2>
           </div>
         </div>
         <div class="imgWrap">
-          <img src="../assets/" alt="">
-          <div>
-            <h2></h2>
-            <p></p>
+          <img src="../assets/DSC05624.JPG" alt="Le Grazie">
+          <div onclick="showImage(event)" data-img="../assets/DSC05624.JPG">
+            <h2>Le Grazie</h2>
+          </div>
+        </div>
+        <div class="imgWrap">
+          <img src="../assets/DSC05731.JPG" alt="Cinque Terre">
+          <div onclick="showImage(event)" data-img="../assets/DSC05731.JPG">
+            <h2>Cinque Terre</h2>
+          </div>
+        </div>
+        <div class="imgWrap">
+          <img src="../assets/DSC05795.JPG" alt="Porto venere">
+          <div onclick="showImage(event)" data-img="../assets/DSC05795.JPG">
+            <h2>Porto venere</h2>
+          </div>
+        </div>
+        <div class="imgWrap">
+          <img src="../assets/DSC05828.JPG" alt="Castello Doria">
+          <div onclick="showImage(event)" data-img="../assets/DSC05828.JPG">
+            <h2>Castello Doria</h2>
+          </div>
+        </div>
+        <div class="imgWrap">
+          <img src="../assets/DSC06283.JPG" alt="Kocour Mikeš">
+          <div onclick="showImage(event)" data-img="../assets/DSC06283.JPG">
+            <h2>Mukařov - soška kocoura Mikeše</h2>
           </div>
         </div>
 
@@ -62,4 +93,16 @@
   </div>
 </body>
 
+<div id="Modal" class="modal">
+  <div class="modalContent">
+    <img id="modalImage" src="" alt="modal image">
+    <h2 id="modalHeader">Modal</h2>
+  </div>
+
+</div>
+<script>
+  var modal = document.getElementById("Modal");
+  var img = document.getElementById("modalImage");
+  var header = document.getElementById("modalHeader");
+</script>
 </html>

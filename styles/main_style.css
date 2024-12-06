@@ -1,12 +1,12 @@
 :root{
     --background_color: rgb(40, 40, 40);
-    --segment_color: rgba(0,0,0,0.5);
+    --segment_background_color: rgba(0,0,0,0);
 
     /*https://coolors.co/0b0033-370031-832232-ce8964-eaf27c*/
     --secondary_segment_color:#0e014b;
     --text_color: #EAF27C;
     --accent_color: #370031;
-    --border_color: #832232;
+    --important_color: #832232;
     --secondary_text_color: #CE8964;
 
     --main_font_family: Georgia, 'Times New Roman', Times, serif;
@@ -17,10 +17,16 @@
     font-family: var(--main_font_family);
     margin: 0%;
     border-color: var(--text_color);
+    border-width: 4px;
+    background-color: var(--segment_background_color);
 }
 
 a{
     text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 html{
@@ -41,11 +47,12 @@ body{
     grid-template-rows: 100%;
 }
 
+
+
 .scrollView{
     padding-right: 15px;
     grid-area: scroll;
     overflow-y:auto;
-    scrollbar-width: 0px;
 }
 
 .scrollContent{
@@ -59,6 +66,10 @@ body{
     grid-template-columns: 100%;
     row-gap: 15px;
     grid-template-rows: auto 1fr auto;
+}
+
+main{
+    width: 100%;
 }
 
 .scrollContent *{
@@ -102,8 +113,8 @@ nav a{
     display: block;
     text-align: center;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 nav a:hover{
@@ -152,11 +163,7 @@ footer .copy{
     grid-area: copy;
 }
 
-@media only screen and (max-width:769px){
-    
-}
-
-@media only screen and (max-width:480px){
+@media only screen and (max-width:500px){
    
     body{
         grid-template-areas: 

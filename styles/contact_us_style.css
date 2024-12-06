@@ -1,54 +1,96 @@
 @import "main_style.css";
 
-form{
+form {
     display: grid;
-    grid-template-areas: 
-    'type message'
-    'name message'
-    'email message'
-    'phone message'
-    'adress message'
-    'submit submit';
-    gap: 10px;
-    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        'type type message'
+        'name surname message'
+        'email email message'
+        'phone phone message'
+        'address address message'
+        'submit submit submit';
+    gap: 15px;
+    grid-template-columns: auto auto 1fr;
+    height: 100%;
 
 }
 
-input{
+
+input {
     border-style: solid;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     padding: 15px;
+    text-align: center;
+    font-size: larger;
 }
 
-input:focus{
-    border-color: var(--accent_color);
+input:focus {
+    border-color: var(--important_color);
     outline: none;
 }
 
-#subButton{
-    grid-area: submit;
+textarea:focus {
+    border-color: var(--important_color);
+    outline: none;
 }
 
-#jmenoInput{
+#subButton {
+    grid-area: submit;
+    font-size: larger;
+}
+
+#jmenoInput {
     grid-area: name;
 }
 
-#emailInput{
+#surnameInput {
+    grid-area: surname;
+}
+
+#emailInput {
     grid-area: email;
 }
 
-#telInput{
+#telInput {
     grid-area: phone;
 }
 
-#message{
+#message {
+    border-style: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: larger;
+}
+
+#textBorder {
+    border-style: solid;
     grid-area: message;
+    padding: 20px 10px;
+    width: 100%;
 }
 
-#typeInput{
+#typeInput {
     grid-area: type;
+    font-size: larger;
+    padding: 10px 0px;
+    text-align: center;
 }
 
-#adressInput{
-    grid-area: adress;
+#adressInput {
+    grid-area: address;
+}
+
+@media only screen and (max-width:1000px) {
+    form {
+        grid-template-areas:
+            'type type'
+            'name surname'
+            'email email'
+            'phone phone'
+            'address address'
+            'message message'
+            'submit submit';
+        grid-template-columns: 1fr 1fr;
+    }
 }
