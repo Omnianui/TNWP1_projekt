@@ -15,7 +15,6 @@ form {
 
 }
 
-
 input {
     border-style: solid;
     background-color: rgba(0, 0, 0, 0);
@@ -30,7 +29,6 @@ input:focus {
 }
 
 textarea:focus {
-    border-color: var(--important_color);
     outline: none;
 }
 
@@ -68,6 +66,10 @@ textarea:focus {
     grid-area: message;
     padding: 20px 10px;
     width: 100%;
+}
+
+#textBorder:has(#message:focus){
+    border-color: var(--important_color);
 }
 
 #typeInput {
